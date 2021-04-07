@@ -21,7 +21,7 @@ class SingleNetworkCallViewModel(
         fetchUsers()
     }
 
-    private fun fetchUsers() {
+    fun fetchUsers() {
         viewModelScope.launch {
             rowsItems.postValue(Resource.loading(null))
             try {

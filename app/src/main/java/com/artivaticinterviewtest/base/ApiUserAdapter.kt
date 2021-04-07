@@ -51,7 +51,8 @@ class ApiUserAdapter(
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
         holder.bind(rowsItem[position],context)
 
-    fun addData(list: ArrayList<RowsItem?>?) {
+    fun addData(list: ArrayList<RowsItem>) {
+        rowsItem.clear()
         for( i in 0 until (list?.size ?: 0)){
             rowsItem.add(list!![i]!!)
         }
